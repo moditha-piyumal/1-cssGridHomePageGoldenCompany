@@ -1,0 +1,179 @@
+
+:root {
+   --primary: rgb(117, 111, 89);
+   --secondary: rgb(219, 174, 26);
+   --dark: rgb(68, 21, 6);
+   --light: rgb(247, 130, 53);
+   --shadow: 5px 8px 6px rgba(238, 180, 23, 0.973);
+   
+}
+
+html {box-sizing: border-box; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: var(--secondary);}
+
+body {background-image: url(bkx.jpg); background-position: center;}
+
+/* a {text-decoration: none;} */
+
+.wrapper {display: grid; gap: 20px;} 
+
+/* img {max-width: 100%;} */
+
+.button {text-decoration: none; text-align: center; padding: 5px; margin: 16px; color: var(--dark); background-color: var(--light); box-shadow: var(--shadow); border-radius: 8px; min-width: 200px;}
+
+.button:hover { color: var(--secondary); background-color: var(--primary); box-shadow: var(--shadow);}
+
+/* CSS for the Navbar */
+
+.navi ul {
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+   list-style: none;
+   padding: 0;
+
+}
+
+.navi a {
+   display: block;
+   text-decoration: none;
+   background-color: var(--light);
+   color: var(--dark);
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 15px;
+   box-shadow: var(--shadow);
+   min-height: 40px;
+   padding: 8px;
+   border-radius: 10px;
+}
+
+.navi a:hover {
+   background-color: var(--primary);
+   color: var(--dark);
+   box-shadow: var(--shadow);
+}
+
+/* CSS for Top Boxes */
+
+.topbox {
+   display: grid;
+   gap: 20px;
+   grid-template-areas: 
+      'linkboxa picbox linkboxb'
+      'linkboxc picbox linkboxd';
+}
+
+
+
+.picbox {grid-area: picbox;
+min-height: 300px;;
+background: url(skull.jpg);
+background-size: cover;
+background-position: center;
+padding: 30px;
+
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;
+box-shadow: var(--shadow);
+border-radius: 10px;
+
+}
+
+.picbox h1 {font-size: 37px;}
+.picbox p { font-size: 18px; color: wheat; font-weight: bold;}
+
+.linkbox {
+   background-color: var(--dark);
+   color: var(--light);
+   box-shadow: var(--shadow);
+   min-width: 150px;
+   align-items: center;
+   padding: 20px;
+   border-radius: 10px;
+   display: grid;
+   font-size: 19px;
+
+}
+
+.linkboxa {
+   grid-area: linkboxa;
+   text-decoration: none; 
+}
+.linkboxa:hover {background-color: var(--secondary);
+   color: var(--primary);
+}
+.linkboxb {
+   grid-area: linkboxb;
+   text-decoration: none; 
+}
+.linkboxb:hover {background-color: var(--secondary);
+   color: var(--primary);
+}
+.linkboxc {
+   grid-area: linkboxc;
+   text-decoration: none; 
+}
+.linkboxc:hover {background-color: var(--secondary);
+   color: var(--primary);
+}
+.linkboxd {
+   grid-area: linkboxd;
+   text-decoration: none; 
+}
+.linkboxd:hover {background-color: var(--secondary);
+   color: var(--primary);
+}
+
+.divider {
+   /* display: grid; */
+   gap: 20px;
+   color: var(--dark);
+   background-color: var(--light);
+   background-size: auto;
+   box-shadow: var(--shadow);
+   border-radius: 10px;
+   align-items: center;
+   text-align: center;
+}
+
+.bottomboxes {
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   box-sizing: border-box;
+   
+}
+
+.linkbox2 {
+   min-height: 150px;
+   background-color: var(--dark);
+   color: var(--light);
+   text-decoration: none;
+   box-shadow: var(--shadow);
+   padding: 10px;
+   text-align: center;
+   align-items: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   box-sizing: border-box;
+   border-radius: 10px;
+   font-size: 19px;
+}
+.linkbox2:hover {background-color: var(--primary); color: var(--dark);}
+
+.foot {
+   background-color: var(--primary); color: var(--dark); text-align: center; min-height: 50px; padding-top: 5px; margin-top: 20px; border-radius: 10px; box-shadow: var(--shadow); margin-bottom: 20px;
+}
+
+@media (max-width: 700px) 
+{.bottomboxes {grid-template-columns: 1fr;}}
+@media (max-width: 700px){.topbox {grid-template-areas: 
+   'linkboxa'
+   'linkboxb'
+   'picbox'
+   'picbox'
+   'linkboxc'
+   'linkboxd';}}
+@media (max-width: 700px) {.navi ul {grid-template-columns: 1fr;}}
